@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <main class="container">
+        <section>
+            <form class="form-group" id="myForm" name="myForm">
+                <div class="form-shadow">
+                    <div class="form-one">
+                        <label for="Name">Nome</label>
+                        <input type="text" placeholder="Nome" required  id="Name">
+                        <label for="E-mail">E-mail</label>
+                        <input type="text" placeholder="Seu Email" required  id="E-mail">
+                        <label for="Phone">Telefone</label>
+                        <input type="tel" placeholder="Seu Numero" required  id="Phone">
+                        <button type="button" onclick="submitFormOne()"><img src="./assets/arrow_forward_ios_white_24dp.svg"></button>
+                    </div>
+                    <div class="form-two" style="display: none;">
+                        <label for="Address">Endereço</label>
+                        <input type="text" placeholder="Seu Endereço" required  id="Address">
+                        <label for="City">Cidade</label>
+                        <input type="text" placeholder="Sua Cidade" required id="City">
+                        <label for="State">Estado</label>
+                        <input type="text" placeholder="Seu Estado" required  id="State">
+                        <label for="Zip">CEP</label>
+                        <input type="text" placeholder="Seu CEP" required  id="Zip">
+                        <button type="button" onclick="submitFormTwo()"><img src="./assets/arrow_forward_ios_white_24dp.svg"></button>
+                    </div>
+                    <div class="print-data" style="display: none;">
+                        <h1>Imprima seus dados</h1>
+                        <button type="button" onclick="getFormData()"><img src="./assets/arrow_forward_ios_white_24dp.svg"></button>
+                    </div>
+                </div>
+            </form>
+
+        </section>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>
