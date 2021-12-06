@@ -16,138 +16,158 @@
             <header>
                 <div class="container-header">
                     <div>
-                        <h1 style="display: inline-block;">Ex:</h1>
+                        <h1 style="display: inline-block;">Texto</h1>
                         <span class="divider">||</span>
-                        <button class="btn-charge">Carga</button>
+                        <button class="btn-charge" onclick="getFormData()">Exportar</button>
                     </div>
-                    <button class="form-btn" onclick="submitFormOne()">A</button>
-                    <button class="form-btn" onclick="submitFormTwo()">B</button>
-                    <button class="form-btn" onclick="submitFormThree()">C</button>
-                    <button class="form-btn" onclick="submitFormFour()">D</button>
-                    <button class="form-btn" onclick="submitFormFive()">E</button>
-                    <button class="form-btn" onclick="submitFormSix() ">F</button>
-                    <button class="form-btn" onclick="submitFormSeven()">G</button>
-                    <button class="form-btn" onclick="submitFormEight()">H</button>
-                    <button class="form-btn" onclick="submitFormNine()">I</button>
-                    <button class="form-btn" onclick="submitFormTen()">J</button>
-                    <button class="form-btn" onclick="">K</button>
+                    <button class="form-btn" onclick="openFormOne()">A</button>
+                    <button class="form-btn" onclick="openFormTwo()">B</button>
+                    <button class="form-btn" onclick="openFormThree()">C</button>
+                    <button class="form-btn" onclick="openFormFour()">D</button>
+                    <button class="form-btn" onclick="openFormFive()">E</button>
+                    <button class="form-btn" onclick="openFormSix()">F</button>
+                    <button class="form-btn" onclick="openFormSeven()">G</button>
+                    <button class="form-btn" onclick="openFormEight()">H</button>
+                    <button class="form-btn" onclick="openFormNine()">I</button>
+                    <button class="form-btn" onclick="openFormTen()">J</button>
                 </div>
             </header>
             <form class="form-group" id="myForm" name="myForm" method="post">
+
                 <div class="form-shadow">
-                    <div class="form-one">
-                        <button class="btn-card">A</button>
-                        <button type="button" onclick="submitFormOne()" class="btn-next"><img
-                                src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
-                        <label>Nome</label>
-                        <input type="text" placeholder="Nome" required id="Name">
-                        <label>Sobrenome</label>
-                        <input type="text" placeholder="Seu Sobrenome" required id="LastName">
+                    <div class="form form-one">
+                        <header>
+                            <h1>A</h1>
+                        </header>
+
+                        <span>
+                            <label>Nome</label>
+                            <input type="text" placeholder="Nome" required id="Name">
+                            <label>Sobrenome</label>
+                            <input type="text" placeholder="Seu Sobrenome" required id="LastName">
+                            <button type="button" onclick="submitFormOne()" class="btn-next"><img
+                                    src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
+                        </span>
                     </div>
-                    <div class="form-two" style="display: none;" >
-                        <button class="btn-card">B</button>
-                        <button class="btn-next" onclick="submitFormTwo()"><img
-                                src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
-                        <label>Idade</label>
-                        <input type="date" placeholder="Sua idade" required id="Age">
-                        <label>Telefone</label>
-                        <input type="tel" placeholder="Seu Numero" required id="Phone">
+                    <div class="form form-two" style="display: none;">
+                        <header>
+                            <h1>B</h1>
+                        </header>
+
+                        <span>
+                            <label>Idade</label>
+                            <input type="date" placeholder="Sua idade" required id="Age">
+                            <label>Telefone</label>
+                            <input type="tel" placeholder="Seu Numero" required id="Phone">
+                            <button type="button" class="btn-next" onclick="submitFormTwo()"><img
+                                    src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
+                        </span>
                     </div>
-                    <div class="form-three" style="display: none;">
-                        <button class="btn-card">C</button>
-                        <button class="btn-next" onclick="submitFormThree()"><img
-                                src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
-                        <label>Nome</label>
-                        <input type="text" placeholder="Nome" required id="Name">
-                        <label>E-mail</label>
-                        <input type="text" placeholder="Seu Email" required id="E-mail">
-                        <label>Telefone</label>
-                        <input type="tel" placeholder="Seu Numero" required id="Phone">
+                    <div class="form form-three" style="display: none;">
+                        <header>
+                            <h1>C</h1>
+                        </header>
+
+                        <span>
+                            <label>E-mail</label>
+                            <input type="text" placeholder="Seu Email" required id="E-mail">
+                            <label>Apelido</label>
+                            <input type="text" placeholder="Seu Apelido" required id="Nickname">
+                            <button type="button" class="btn-next" onclick="submitFormThree()"><img
+                                    src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
+                        </span>
                     </div>
-                    <div class="form-four" style="display: none;">
-                        <button class="btn-card">D</button>
-                        <button class="btn-next" onclick="submitFormFour()"><img
-                                src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
-                        <label>Nome</label>
-                        <input type="text" placeholder="Nome" required id="Name">
-                        <label>E-mail</label>
-                        <input type="text" placeholder="Seu Email" required id="E-mail">
-                        <label>Telefone</label>
-                        <input type="tel" placeholder="Seu Numero" required id="Phone">
+                    <div class="form form-four" style="display: none;">
+                        <header>
+                            <h1>D</h1>
+                        </header>
+                        
+                        <span>
+                            <label>Endereço</label>
+                            <input type="text" placeholder="Seu Endereço" required id="Address">
+                            <button type="button" class="btn-next" onclick="submitFormFour()"><img
+                                    src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
+                        </span>
                     </div>
-                    <div class="form-five" style="display: none;">
-                        <button class="btn-card">E</button>
-                        <button class="btn-next" onclick="submitFormFive()"><img
-                                src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
-                        <label>Nome</label>
-                        <input type="text" placeholder="Nome" required id="Name">
-                        <label>E-mail</label>
-                        <input type="text" placeholder="Seu Email" required id="E-mail">
-                        <label>Telefone</label>
-                        <input type="tel" placeholder="Seu Numero" required id="Phone">
+                    <div class="form form-five" style="display: none;">
+                        <header>
+                            <h1>E</h1>
+                        </header>
+                        
+                        <span>
+                            <label>Cidade</label>
+                            <input type="text" placeholder="Sua Cidade" required id="City">
+                            <button type="button" class="btn-next" onclick="submitFormFive()"><img
+                                    src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
+                        </span>
                     </div>
-                    <div class="form-six" style="display: none;">
-                        <button class="btn-card">F</button>
-                        <button class="btn-next" onclick="submitFormSix()"><img
-                                src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
-                        <label>Nome</label>
-                        <input type="text" placeholder="Nome" required id="Name">
-                        <label>E-mail</label>
-                        <input type="text" placeholder="Seu Email" required id="E-mail">
-                        <label>Telefone</label>
-                        <input type="tel" placeholder="Seu Numero" required id="Phone">
+                    <div class="form form-six" style="display: none;">
+                        <header>
+                            <h1>F</h1>
+                        </header>
+                        
+                        <span>
+                            <label>Estado</label>
+                            <input type="text" placeholder="Seu Estado" required id="State">
+                            <button type="button" class="btn-next" onclick="submitFormSix()"><img
+                                    src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
+                        </span>
                     </div>
-                    <div class="form-seven" style="display: none;">
-                        <button class="btn-card">G</button>
-                        <button class="btn-next" onclick="submitFormSeven()"><img
-                                src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
-                        <label>Nome</label>
-                        <input type="text" placeholder="Nome" required id="Name">
-                        <label>E-mail</label>
-                        <input type="text" placeholder="Seu Email" required id="E-mail">
-                        <label>Telefone</label>
-                        <input type="tel" placeholder="Seu Numero" required id="Phone">
+                    <div class="form form-seven" style="display: none;">
+                        <header>
+                            <h1>G</h1>
+                        </header>
+                        
+                        <span>
+                            <label>País</label>
+                            <input type="text" placeholder="Seu País" required id="Country">
+                            <button type="button" class="btn-next" onclick="submitFormSeven()"><img
+                                    src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
+                        </span>
                     </div>
-                    <div class="form-eight" style="display: none;">
-                        <button class="btn-card">H</button>
-                        <button class="btn-next" onclick="submitFormEight()"><img
-                                src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
-                        <label>Nome</label>
-                        <input type="text" placeholder="Nome" required id="Name">
-                        <label>E-mail</label>
-                        <input type="text" placeholder="Seu Email" required id="E-mail">
-                        <label>Telefone</label>
-                        <input type="tel" placeholder="Seu Numero" required id="Phone">
+                    <div class="form form-eight" style="display: none;">
+                        <header>
+                            <h1>H</h1>
+                        </header>
+                        
+                        <span>
+                            <label>CEP</label>
+                            <input type="number" placeholder="Seu CEP" required id="Zip">
+                            <button type="button" class="btn-next" onclick="submitFormEight()"><img
+                                    src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
+                        </span>
                     </div>
-                    <div class="form-nine" style="display: none;">
-                        <button class="btn-card">I</button>
-                        <button class="btn-next" onclick="submitFormNine()"><img
-                                src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
-                        <label>Nome</label>
-                        <input type="text" placeholder="Nome" required id="Name">
-                        <label>E-mail</label>
-                        <input type="text" placeholder="Seu Email" required id="E-mail">
-                        <label>Telefone</label>
-                        <input type="tel" placeholder="Seu Numero" required id="Phone">
+                    <div class="form form-nine" style="display: none;">
+                        <header>
+                            <h1>I</h1>
+                        </header>
+                        
+                        <span>
+                            <label>Senha</label>
+                            <input type="password" placeholder="Sua Senha" required id="Password">
+                            <button type="button" class="btn-next" onclick="submitFormNine()"><img
+                                    src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
+                        </span>
                     </div>
-                    <div class="form-ten" style="display: none;">
-                        <button class="btn-card">J</button>
-                        <button class="btn-next" onclick="submitFormTen()"><img
-                                src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
-                        <label>Nome</label>
-                        <input type="text" placeholder="Nome" required id="Name">
-                        <label>E-mail</label>
-                        <input type="text" placeholder="Seu Email" required id="E-mail">
-                        <label>Telefone</label>
-                        <input type="tel" placeholder="Seu Numero" required id="Phone">
+                    <div class="form form-ten" style="display: none;">
+                        <header>
+                            <h1>J</h1>
+                        </header>
+                        
+                        <span>
+                            <label>Confirmar Senha</label>
+                            <input type="password" placeholder="Confirme sua Senha" required id="ConfirmPassword">
+                            <button type="button" class="btn-next" onclick="submitFormTen()"><img
+                                    src="./src/assets/arrow_forward_ios_white_24dp.svg"></button>
+                        </span>
                     </div>
+                    <h1 class="finished" style="display: none;">Muito Obrigado (a) Você finalizou</h1>
                 </div>
             </form>
-
         </section>
     </main>
     <script src='./index.js'></script>
 
-    <body>
+</body>
 
 </html>
