@@ -10,6 +10,8 @@ const formNine = document.querySelector(".form-nine");
 const formTen = document.querySelector(".form-ten");
 const finished = document.querySelector(".finished");
 
+const arrayOfForms = [formOne, formTwo, formThree, formFour, formFive, formSix, formSeven, formEight, formNine, formTen]
+
 function saveFormData() {
   const formOneData = {
     name: formOne.querySelector("#Name").value,
@@ -32,6 +34,7 @@ function getFormData() {
   const formOneData = JSON.parse(localStorage.getItem("formOneData"));
   console.log(formOneData);
 }
+
 function submitFormOne() {
   formOne.style.display = "none";
   formTwo.style.display = "block";
@@ -80,125 +83,14 @@ function submitFormTen() {
   formTen.style.display = "none";
   saveFormData();
 }
-function openFormOne(items) {
-  formOne.style.display = "block";
-  formTwo.style.display = "none";
-  formThree.style.display = "none";
-  formFour.style.display = "none";
-  formFive.style.display = "none";
-  formSix.style.display = "none";
-  formSeven.style.display = "none";
-  formEight.style.display = "none";
-  formNine.style.display = "none";
-  formTen.style.display = "none";
-}
-function openFormTwo(items) {
 
-  formOne.style.display = "none";
-  formTwo.style.display = "block";
-  formFour.style.display = "none";
-  formThree.style.display = "none";
-  formFive.style.display = "none";
-  formSix.style.display = "none";
-  formSeven.style.display = "none";
-  formEight.style.display = "none";
-  formNine.style.display = "none";
-  formTen.style.display = "none";
-}
 
-function openFormThree() {
-  formThree.style.display = "block";
-  formOne.style.display = "none";
-  formTwo.style.display = "none";
-  formFour.style.display = "none";
-  formFive.style.display = "none";
-  formSix.style.display = "none";
-  formSeven.style.display = "none";
-  formEight.style.display = "none";
-  formNine.style.display = "none";
-  formTen.style.display = "none";
-}
-function openFormFour() {
-  formOne.style.display = "none";
-  formTwo.style.display = "none";
-  formThree.style.display = "none";
-  formFour.style.display = "block";
-  formFive.style.display = "none";
-  formSix.style.display = "none";
-  formSeven.style.display = "none";
-  formEight.style.display = "none";
-  formNine.style.display = "none";
-  formTen.style.display = "none";
-}
-function openFormFive() {
-  formOne.style.display = "none";
-  formTwo.style.display = "none";
-  formThree.style.display = "none";
-  formFour.style.display = "none";
-  formFive.style.display = "block";
-  formSix.style.display = "none";
-  formSeven.style.display = "none";
-  formEight.style.display = "none";
-  formNine.style.display = "none";
-  formTen.style.display = "none";
-}
-function openFormSix() {
-  formOne.style.display = "none";
-  formTwo.style.display = "none";
-  formThree.style.display = "none";
-  formFour.style.display = "none";
-  formFive.style.display = "none";
-  formSix.style.display = "block";
-  formSeven.style.display = "none";
-  formEight.style.display = "none";
-  formNine.style.display = "none";
-  formTen.style.display = "none";
-}
-function openFormSeven() {
-  formOne.style.display = "none";
-  formTwo.style.display = "none";
-  formThree.style.display = "none";
-  formFour.style.display = "none";
-  formFive.style.display = "none";
-  formSix.style.display = "none";
-  formSeven.style.display = "block";
-  formEight.style.display = "none";
-  formNine.style.display = "none";
-  formTen.style.display = "none";
-}
-function openFormEight() {
-  formOne.style.display = "none";
-  formTwo.style.display = "none";
-  formThree.style.display = "none";
-  formFour.style.display = "none";
-  formFive.style.display = "none";
-  formSix.style.display = "none";
-  formSeven.style.display = "none";
-  formEight.style.display = "block";
-  formNine.style.display = "none";
-  formTen.style.display = "none";
-}
-function openFormNine() {
-  formOne.style.display = "none";
-  formTwo.style.display = "none";
-  formThree.style.display = "none";
-  formFour.style.display = "none";
-  formFive.style.display = "none";
-  formSix.style.display = "none";
-  formSeven.style.display = "none";
-  formEight.style.display = "none";
-  formNine.style.display = "block";
-  formTen.style.display = "none";
-}
-function openFormTen() {
-  formOne.style.display = "none";
-  formTwo.style.display = "none";
-  formThree.style.display = "none";
-  formFour.style.display = "none";
-  formFive.style.display = "none";
-  formSix.style.display = "none";
-  formSeven.style.display = "none";
-  formEight.style.display = "none";
-  formNine.style.display = "none";
-  formTen.style.display = "block";
+function openForm(formNumber) {
+  arrayOfForms.map((form, index) => {
+    if(index === formNumber - 1) {
+      return form.style.display = "block";
+    } else {
+      return form.style.display = "none"
+    }
+  })
 }
